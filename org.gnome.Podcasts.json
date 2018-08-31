@@ -16,7 +16,8 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--device=dri"
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
@@ -26,13 +27,24 @@
     },
     "modules" : [
         {
+            "name" : "libhandy",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.2/libhandy-v0.0.2.tar.gz",
+                    "sha256" : "7cfa36032981e4ad7bb156d14df588a784743a066f57651260072fe21317cbd3"
+                }
+            ]
+        },
+        {
             "name" : "gnome-podcasts",
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/306c5f5bafbf1ebc54c9f17bd4881e8a/gnome-podcasts-0.4.4.tar.xz",
-                    "sha256" : "6424a05637909593aee6f5672149e37cc0203210ea06a1731eda196312d2876d"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/823f7abee51002ed803da87b31b92981/gnome-podcasts-0.4.5.tar.xz",
+                    "sha256" : "900354ef718947e20febf85f5d44e1dfeb5a806a388c6dde6cce960913b0f9b9"
                 }
             ]
         }
