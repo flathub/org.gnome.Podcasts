@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.28",
+    "runtime-version" : "3.30",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -17,7 +17,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri"
+        "--device=dri",
+        "--own-name=org.mpris.MediaPlayer2.Podcasts"
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
@@ -29,11 +30,19 @@
         {
             "name" : "libhandy",
             "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dintrospection=true",
+                "-Dgtk-doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false",
+                "-Dglade_catalog=false"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.2/libhandy-v0.0.2.tar.gz",
-                    "sha256" : "7cfa36032981e4ad7bb156d14df588a784743a066f57651260072fe21317cbd3"
+                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.4/libhandy-v0.0.4.tar.gz",
+                    "sha256" : "2c54b61cefb153b3a6ab8b6ecb520375854301632c998b003dd7dba623ea2a03"
                 }
             ]
         },
@@ -43,8 +52,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/823f7abee51002ed803da87b31b92981/gnome-podcasts-0.4.5.tar.xz",
-                    "sha256" : "900354ef718947e20febf85f5d44e1dfeb5a806a388c6dde6cce960913b0f9b9"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/e59ac5d618d7daf4c7f33ba72957c466/gnome-podcasts-0.4.6.tar.xz",
+                    "sha256" : "2c2fd8acc766298cd17375072f717bdaa2dd5450bee8beb82cd78522f898593c"
                 }
             ]
         }
