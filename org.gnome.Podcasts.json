@@ -38,6 +38,10 @@
                 "-Dvapi=false",
                 "-Dglade_catalog=false"
             ],
+            "cleanup" : [
+              "/include",
+              "/lib/pkgconfig"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
