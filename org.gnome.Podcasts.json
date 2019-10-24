@@ -1,24 +1,19 @@
 {
     "app-id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.30",
+    "runtime-version" : "3.34",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "command" : "gnome-podcasts",
     "finish-args" : [
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--metadata=X-DConf=migrate-path=/org/gnome/Podcasts/",
         "--share=network",
         "--share=ipc",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
-        "--socket=pulseaudio",
-        "--device=dri",
-        "--own-name=org.mpris.MediaPlayer2.Podcasts"
+        "--socket=pulseaudio"
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
@@ -31,22 +26,22 @@
             "name" : "libhandy",
             "buildsystem" : "meson",
             "config-opts" : [
-                "-Dintrospection=true",
-                "-Dgtk-doc=false",
+                "-Dintrospection=disabled",
+                "-Dgtk_doc=false",
                 "-Dtests=false",
                 "-Dexamples=false",
                 "-Dvapi=false",
-                "-Dglade_catalog=false"
+                "-Dglade_catalog=disabled"
             ],
             "cleanup" : [
-              "/include",
-              "/lib/pkgconfig"
+                "/include",
+                "/lib/pkgconfig"
             ],
             "sources" : [
                 {
-                    "type" : "archive",
-                    "url" : "https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.4/libhandy-v0.0.4.tar.gz",
-                    "sha256" : "2c54b61cefb153b3a6ab8b6ecb520375854301632c998b003dd7dba623ea2a03"
+                    "type" : "git",
+                    "url" : "https://source.puri.sm/Librem5/libhandy.git",
+                    "commit" : "f5909a897f70143bdd2f89f47a63c1bf848330ce"
                 }
             ]
         },
@@ -56,8 +51,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/e59ac5d618d7daf4c7f33ba72957c466/gnome-podcasts-0.4.6.tar.xz",
-                    "sha256" : "2c2fd8acc766298cd17375072f717bdaa2dd5450bee8beb82cd78522f898593c"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/90c4f40f529ff91dabac5d7cbbc0f5ed/gnome-podcasts-0.4.7.tar.xz",
+                    "sha256" : "372d50250015f0c2b574200b0502f4c07c2b74dae7936972c29de8cbba10995a"
                 }
             ]
         }
