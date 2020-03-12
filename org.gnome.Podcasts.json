@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.34",
+    "runtime-version" : "3.36",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -41,7 +41,7 @@
                 {
                     "type" : "git",
                     "url" : "https://source.puri.sm/Librem5/libhandy.git",
-                    "commit" : "f5909a897f70143bdd2f89f47a63c1bf848330ce"
+                    "commit" : "7a193d7692c9c76a1a94f17c4d30b585f77d177c"
                 }
             ]
         },
