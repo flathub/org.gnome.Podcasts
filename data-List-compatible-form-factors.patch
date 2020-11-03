@@ -1,0 +1,39 @@
+From 964cd5983d13bebf2efc53fbed725b6335b61a12 Mon Sep 17 00:00:00 2001
+From: Adrien Plazas <kekun.plazas@laposte.net>
+Date: Tue, 3 Nov 2020 19:26:37 +0100
+Subject: [PATCH] data: List compatible form-factors
+
+This will allow the app to be available in Phosh and PureOS Store.
+---
+ podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in | 4 ++++
+ podcasts-gtk/resources/org.gnome.Podcasts.desktop.in.in     | 2 ++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in b/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
+index f677cf0..2347b77 100644
+--- a/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
++++ b/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
+@@ -90,6 +90,10 @@
+   <project_group>GNOME</project_group>
+   <update_contact>jpetridis@gnome.org</update_contact>
+   <developer_name>Jordan Petridis</developer_name>
++  <custom>
++    <value key="Purism::form_factor">workstation</value>
++    <value key="Purism::form_factor">mobile</value>
++  </custom>
+ </component>
+ 
+ 
+diff --git a/podcasts-gtk/resources/org.gnome.Podcasts.desktop.in.in b/podcasts-gtk/resources/org.gnome.Podcasts.desktop.in.in
+index a6f62a4..39438ee 100644
+--- a/podcasts-gtk/resources/org.gnome.Podcasts.desktop.in.in
++++ b/podcasts-gtk/resources/org.gnome.Podcasts.desktop.in.in
+@@ -11,3 +11,5 @@ Categories=GNOME;GTK;AudioVideo;Audio;
+ # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+ Keywords=Podcast;RSS;
+ DBusActivatable=true
++# Translators: Do NOT translate or transliterate this text (these are enum types)!
++X-Purism-FormFactor=Workstation;Mobile;
+-- 
+2.28.0
+
