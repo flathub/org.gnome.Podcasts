@@ -53,6 +53,10 @@
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/World/podcasts/uploads/cf61f00c7ac92ddef81c4f5ed7e737a7/gnome-podcasts-0.4.8.tar.xz",
                     "sha256" : "406723f558d53f6c4a10fbb8d80e5957168bfc9b2fcdf824dc27b05820adb17a"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "data-List-compatible-form-factors.patch"
                 }
             ]
         }
