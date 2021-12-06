@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -28,37 +28,13 @@
     },
     "modules" : [
         {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dintrospection=disabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "cleanup" : [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources" : [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag": "1.3.90",
-                    "commit": "38fd111fefa487cb16c9d52a5cdba3a7435242a9"
-                }
-            ]
-        },
-        {
             "name" : "gnome-podcasts",
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/17d5e6aac54d8d1cba16417994391ffb/gnome-podcasts-0.5.0-beta.tar.xz",
-                    "sha256" : "e1372a4eaa8be08771c13d9c491651e5a71a38c6b302fa1ab53e98e9c7374101"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/c3f03c24fb9fe119e9d2c37cad06d665/gnome-podcasts-0.5.0.tar.xz",
+                    "sha256" : "98b9d6c2249d5e82147013e082591a70fd4db696898ed052145e37994094ff11"
                 }
             ]
         }
