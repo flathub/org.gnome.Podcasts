@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -17,8 +17,8 @@
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
+        "cflags": "-DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED",
         "env" : {
-            "CARGO_HOME": "/run/build/gnome-podcasts/cargo",
             "RUSTFLAGS": "",
             "RUST_BACKTRACE": "1",
             "RUST_LOG": "podcasts_gtk=debug,podcasts_data=debug,glib=debug",
@@ -28,37 +28,13 @@
     },
     "modules" : [
         {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dintrospection=disabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "cleanup" : [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources" : [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag": "1.0.3",
-                    "commit": "7126d2e8da9dcdeb5751e60ff6a74930804f9637"
-                }
-            ]
-        },
-        {
             "name" : "gnome-podcasts",
             "buildsystem" : "meson",
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/e07d05de378066ec528729e8897e1d1b/gnome-podcasts-0.4.9.tar.xz",
-                    "sha256" : "c713b4f9bb1941b3ac399a1e88fc1ba455fed2f4347e731be46cec00cff7071a"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/de438a4d62196bddd134bb155a812fe1/gnome-podcasts-0.5.1.tar.xz",
+                    "sha256" : "31475ebe6a5f7595f4ce7e3f00f0a14e25e8e02e55c0024cd122609fa191cba8"
                 }
             ]
         }
