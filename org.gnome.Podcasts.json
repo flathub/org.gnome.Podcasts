@@ -17,7 +17,6 @@
     ],
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
-        "cflags": "-DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED",
         "env" : {
             "RUSTFLAGS": "",
             "RUST_BACKTRACE": "1",
