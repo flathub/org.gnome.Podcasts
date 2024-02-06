@@ -10,6 +10,7 @@
     "finish-args" : [
         "--metadata=X-DConf=migrate-path=/org/gnome/Podcasts/",
         "--share=network",
+        "--device=dri",
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
