@@ -35,6 +35,10 @@
                     "type" : "archive",
                     "url" : "https://gitlab.gnome.org/World/podcasts/uploads/7f5cb601b1eea22cc473077e8c0dcfad/gnome-podcasts-0.6.1.tar.xz",
                     "sha256" : "3e8df13c8eaf49f28e66ad3628b18c5893dc864c1f3579693e287263bc871539"
+                },
+                {
+                    "type": "patch",
+                    "path": "podcasts-appdata.patch"
                 }
             ]
         }
