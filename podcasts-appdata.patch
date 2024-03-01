@@ -1,0 +1,39 @@
+diff --git a/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in b/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
+index cd008640..0329fbe4 100644
+--- a/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
++++ b/podcasts-gtk/resources/org.gnome.Podcasts.appdata.xml.in.in
+@@ -15,13 +15,13 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://gitlab.gnome.org/World/podcasts/raw/master/screenshots/home_view.png</image>
++      <image>https://gitlab.gnome.org/World/podcasts/raw/0.6.1/screenshots/home_view.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>https://gitlab.gnome.org/World/podcasts/raw/master/screenshots/shows_view.png</image>
++      <image>https://gitlab.gnome.org/World/podcasts/raw/0.6.1/screenshots/shows_view.png</image>
+     </screenshot>
+     <screenshot>
+-      <image>https://gitlab.gnome.org/World/podcasts/raw/master/screenshots/show_widget.png</image>
++      <image>https://gitlab.gnome.org/World/podcasts/raw/0.6.1/screenshots/show_widget.png</image>
+     </screenshot>
+   </screenshots>
+   <releases>
+@@ -136,7 +136,7 @@
+     <control>touch</control>
+   </recommends>
+   <requires>
+-    <display_length compare="ge">small</display_length>
++    <display_length compare="ge">768</display_length>
+   </requires>
+   <launchable type="desktop-id">@appid@.desktop</launchable>
+   <url type="homepage">https://apps.gnome.org/app/org.gnome.Podcasts/</url>
+@@ -149,8 +149,6 @@
+   <update_contact>jpetridis@gnome.org</update_contact>
+   <developer_name>The Podcasts developers</developer_name>
+   <custom>
+-    <value key="Purism::form_factor">workstation</value>
+-    <value key="Purism::form_factor">mobile</value>
+     <value key="GnomeSoftware::key-colors">[(250, 181, 174)]</value>
+   </custom>
+ </component>
