@@ -33,8 +33,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/cf983d42961b6e151a4ec02c13f45071/gnome-podcasts-0.7.0.tar.xz",
-                    "sha256" : "2b808dc9efeaf43075726ca317bfbf24a10d41de6f6b735fab9c118740f58f00"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/uploads/ddd1be8a10a81f3376878e790c9b3690/gnome-podcasts-0.7.1.tar.xz",
+                    "sha256" : "60f932afcf2ec9d481381b27d2c5b6d2122564b508b91db370783f2f1c8ae0b8"
                 }
             ]
         }
