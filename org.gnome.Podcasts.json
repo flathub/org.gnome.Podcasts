@@ -1,7 +1,7 @@
 {
     "id" : "org.gnome.Podcasts",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "48",
+    "runtime-version" : "49",
     "sdk" : "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -19,7 +19,6 @@
     "build-options" : {
         "append-path" : "/usr/lib/sdk/rust-stable/bin",
         "env" : {
-            "RUSTFLAGS": "",
             "RUST_BACKTRACE": "1",
             "RUST_LOG": "podcasts_gtk=debug,podcasts_data=debug,glib=debug",
             "G_MESSAGES_DEBUG": "none",
@@ -33,8 +32,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/World/podcasts/-/releases/25.2/downloads/gnome-podcasts-25.2.tar.xz",
-                    "sha256" : "89ef7574b5579e8ebe30bf5e1fe1833a07737aa4f325fab23fbd8fc742b6bda9"
+                    "url" : "https://gitlab.gnome.org/World/podcasts/-/releases/25.3/downloads/gnome-podcasts-25.3.tar.xz",
+                    "sha256" : "fe72a9db6dd53d4c0f43f418abbdde5aa23186c9b6d0f74195cc2114414a600c"
                 }
             ]
         }
